@@ -1,0 +1,15 @@
+{
+  "name": "returntocsv",
+  "version": "1.0.0",
+  "description": "Modulo responsavel por converter para CSV o retorno de um serviço",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "csv",
+    "json"
+  ],
+  "author": "Jameson Rodrigues",
+  "license": "ISC"
+}
