@@ -1,5 +1,5 @@
 {
-  "name": "returntocsv",
+  "name": "convertobjectcsv",
   "version": "1.0.0",
   "description": "Modulo responsavel por converter para CSV o retorno de um serviço",
   "main": "app.js",
@@ -11,5 +11,13 @@
     "json"
   ],
   "author": "Jameson Rodrigues",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamrodrigues/convert-object-csv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamrodrigues/convert-object-csv/issues"
+  },
+  "homepage": "https://github.com/jamrodrigues/convert-object-csv#readme"
 }
