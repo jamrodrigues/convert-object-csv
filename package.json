@@ -1,21 +1,23 @@
 {
-  "name": "convertobjectcsv",
+  "name": "convert-object-csv",
   "version": "1.0.0",
-  "description": "Modulo responsavel por converter para CSV o retorno de um serviço",
-  "main": "app.js",
+  "description": "Converte um json em CSV",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "csv",
-    "json"
-  ],
-  "author": "Jameson Rodrigues",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamrodrigues/convert-object-csv.git"
   },
+  "keywords": [
+    "csv",
+    "son",
+    "convert",
+    "export"
+  ],
+  "author": "Jameson rodrigues",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jamrodrigues/convert-object-csv/issues"
   },

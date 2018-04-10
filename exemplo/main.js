@@ -1,6 +1,6 @@
 (function () {
 	'use strict';
-	var convert = require('../returntocsv.js')
+	// var convertObjectCsv = require("./returntocsv.js");
 
 	var body =  [
 			{
@@ -33,6 +33,7 @@
 		'Idade': 'Idade'
 	};
 
-	convert('teste', body, header);
+	convertObjectCsv('teste', body, header);
+	// convert()
 
 })();
