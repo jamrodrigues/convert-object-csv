@@ -1,42 +1,15 @@
 module.exports = returntocsv;
 
-function returntocsv(prefix_name, res_body, set_header) {
+function returntocsv(prefix_name, body, header) {
     // var prefixName = prefix_name;
-    var csvFile, csvLink, fileName, header, body, csv = [];
+    var csvFile, csvLink, fileName,  csv = [];
 
-    var exportCSV = {
-        setFilename: setFilename,
-        setHeader: setHeader,
-        setBody: setBody,
-        doCsv: doCsv,
-        sortByKeys: sortByKeys
-    };
-
-    return exportCSV;
-
-    function setFilename(prefix_name) {
-        // fileName = data;
-        fileName = prefix_name + '_' + ( new Date() ).toISOString().slice(0,22).replace(/-/g,"") + '.csv'
-    }
-
-    function setHeader(set_header) {
-        header = set_header;
-    }
-
-    function setBody(res_body) {
-        var body = res_body.map(function (responseCsv){
-            return responseCsv;
-        });
-        // body = data;
-        // var body =  vm.dataCsv.map(function (responseCsv) {
-        //     return responseCsv;
-        // });
-    }
-
+    fileName = prefix_name + '_' + ( new Date() ).toISOString().slice(0,22).replace(/-/g,"") + '.csv'
+    
     doCsv();
 
     function doCsv() {
-        if(angular.isDefined(body)){
+        if(body !== undefined){
             csv = _convertDataToCsv(_formatData());
             _download();
         }
@@ -50,16 +23,10 @@ function returntocsv(prefix_name, res_body, set_header) {
         dataObj.push(header);
         // push body
         body.forEach(function (val, key) {
-            val.Title = val.Title.replace(/;/g, '').replace(/\r\n/g, '').replace(/\n/g, '');
-            val.Description = val.Description.replace(/;/g, '').replace(/\r\n/g, '').replace(/\n/g, '');
-            val.Scope_Name = val.Scope_Name.replace(/;/g, '').replace(/\r\n/g, '').replace(/\n/g, '');
-            val.BusinessCase_EffortCostOfImplementation = val.BusinessCase_EffortCostOfImplementation.replace(/\r\n/g, '').replace(/\n/g, '');
-            val.BusinessCase_Rational = val.BusinessCase_Rational.replace(/;/g, '').replace(/\r\n/g, '').replace(/\n/g, '');
-            
             dataObj.push(val);
         });
         // return data csv
-        return exportCSV.sortByKeys(dataObj, keys);
+        return sortByKeys(dataObj, keys);
     }
 
     function _convertDataToCsv(objArray) {
