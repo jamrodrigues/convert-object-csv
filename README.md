@@ -1,11 +1,12 @@
-# convert-object-csv
-
+<<<<<<< HEAD
+# Convert Object CSV
+------------
 E um simples função que converte Json em CSV no Charset UTF8.
-
+-----------------------
 1 - Clone o projeto para o local de sua escolha
-
+-----------------------------
 2 - Import o arquivo ../convert-object-csv/index.js em seu index.html
-
+-----------------------------
 3 - E pronto é so usar.
 
 ## Exemplo:
@@ -31,4 +32,3 @@ E um simples função que converte Json em CSV no Charset UTF8.
     };
     //Convertendo
     convertObjectCsv('prefixo_do_nome_do_arqeuivo', body, header);
-```
