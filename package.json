@@ -1,6 +1,6 @@
 {
   "name": "convert-object-csv",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Converte um json em CSV",
   "main": "index.js",
   "scripts": {

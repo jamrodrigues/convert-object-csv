@@ -63,12 +63,16 @@ function convertObjectCsv(prefix_name, body, header) {
         csvFile = new Blob(["\ufeff", csv], {
             type: "text/csv"
         });
-        csvLink = document.createElement("a");
-        csvLink.download = fileName;
-        csvLink.href = window.URL.createObjectURL(csvFile);
-        csvLink.style.display = "none";
-        document.body.appendChild(csvLink);
-        csvLink.click();
-    }
 
+        if (window.navigator && window.navigator.msSaveOrOpenBlob) { // for IE
+            window.navigator.msSaveOrOpenBlob(csvFile, fileName);
+        } else {
+            csvLink = document.createElement("a");
+            csvLink.download = fileName;
+            csvLink.href = window.URL.createObjectURL(csvFile);
+            csvLink.style.display = "none";
+            document.body.appendChild(csvLink);
+            csvLink.click();
+        }
+    }
 }
