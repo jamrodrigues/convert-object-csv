@@ -5,7 +5,7 @@
  * @param {any} body 
  * @param {any} header 
  */
-function convertObjectCsv(prefix_name, body, header) {
+function convertObjectCsv(prefix_name, body, header, separator) {
     var csvFile, csvLink, fileName,  csv = [];
     //Gera o nome do arquivo final com seu prefixo
     fileName = prefix_name + '_' + ( new Date() ).toISOString().slice(0,22).replace(/-/g,"") + '.csv'
@@ -39,7 +39,7 @@ function convertObjectCsv(prefix_name, body, header) {
         for (var i = 0; i < array.length; i++) {
             var line = '';
             for (var index in array[i]) {
-                if (line != '') line += ';';
+                if (line != '') line += separator;
                 line += array[i][index];
             }
             str += line + '\r\n';
