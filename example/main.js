@@ -33,5 +33,5 @@
 		'Idade': 'Idade'
 	};
 
-	convertObjectCsv('teste', body, header);
+	convertObjectCsv('example', body, header, ';');
 })();
