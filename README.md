@@ -41,6 +41,6 @@ E um simples função que converte Json em CSV no Charset UTF8.
     };
     //Convertendo
     convertObjectCsv('prefixo_do_nome_do_arquivo', body, header);
-    
+    ```
     
     - 1.2.0 => Fix para exportar pelo IE
