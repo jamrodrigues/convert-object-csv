@@ -1,22 +1,31 @@
 /**
  * Function convertObjectCsv
  * 
- * @param {any} prefix_name 
- * @param {any} body 
- * @param {any} header 
+ * @param {string} prefix_name 
+ * @param {object} body 
+ * @param {object} header 
+ * @param {string} header
  */
 function convertObjectCsv(prefix_name, body, header, separator) {
     var csvFile, csvLink, fileName,  csv = [];
+
+    if(prefix_name === undefined){
+        throw('prefix_name is undefined');
+    } else if (body === undefined){
+        throw('body is undefined');
+    } else if (header === undefined){
+        throw('header is undefined');
+    } else if (separator === undefined){
+        throw('separator is undefined');
+    }
     //Gera o nome do arquivo final com seu prefixo
     fileName = prefix_name + '_' + ( new Date() ).toISOString().slice(0,22).replace(/-/g,"") + '.csv'
     
     makecsv();
 
     function makecsv() {
-        if(body !== undefined){
-            csv = _convertDataToCsv(_formatData());
-            _download();
-        }
+        csv = _convertDataToCsv(_formatData());
+        _download();
     }
 
     function _formatData() {
