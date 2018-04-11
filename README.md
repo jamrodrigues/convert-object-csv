@@ -40,4 +40,4 @@ E um simples função que converte Json em CSV no Charset UTF8.
 		'Idade': 'Idade'
     };
     //Convertendo
-    convertObjectCsv('prefixo_do_nome_do_arqeuivo', body, header);
+    convertObjectCsv('prefixo_do_nome_do_arquivo', body, header);
